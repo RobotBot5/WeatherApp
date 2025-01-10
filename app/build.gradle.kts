@@ -1,9 +1,24 @@
+import com.android.build.api.variant.BuildConfigField
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.ksp)
     alias(libs.plugins.parcelize)
+}
+
+androidComponents {
+    val key = property("apikey")?.toString() ?: error(
+        "You should add apikey into gradle.properties"
+    )
+
+    onVariants { variant ->
+        variant.buildConfigFields.put(
+            "WEATHER_API_KEY",
+            BuildConfigField("String", "\"$key\"", "API key for accessing the service")
+        )
+    }
 }
 
 android {
@@ -38,6 +53,7 @@ android {
     }
     buildFeatures {
         compose = true
+        buildConfig = true
     }
 }
 
