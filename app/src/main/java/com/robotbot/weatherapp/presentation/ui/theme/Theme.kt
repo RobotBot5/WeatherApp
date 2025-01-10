@@ -1,6 +1,5 @@
-package com.robotbot.weatherapp.ui.theme
+package com.robotbot.weatherapp.presentation.ui.theme
 
-import android.app.Activity
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme

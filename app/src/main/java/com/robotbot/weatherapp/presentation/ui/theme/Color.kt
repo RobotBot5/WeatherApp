@@ -1,4 +1,4 @@
-package com.robotbot.weatherapp.ui.theme
+package com.robotbot.weatherapp.presentation.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
