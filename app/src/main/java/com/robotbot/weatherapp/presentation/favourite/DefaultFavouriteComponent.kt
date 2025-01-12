@@ -59,7 +59,7 @@ class DefaultFavouriteComponent @AssistedInject constructor(
 
     @AssistedFactory
     interface Factory {
-        fun crate(
+        fun create(
             @Assisted("onCityItemClicked") onCityItemClicked: (City) -> Unit,
             @Assisted("onAddFavouriteClicked") onAddFavouriteClicked: () -> Unit,
             @Assisted("onSearchClicked") onSearchClicked: () -> Unit,
